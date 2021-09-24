@@ -299,7 +299,7 @@ Let's create a new Origin Pool, which will be used in our load balancer by click
 
 .. figure:: _figures/tcplb_mysql_4.png
 
-`e)` Enter a unique name for the origin pool, and then select **K8s Service Name of Origin Server on given Sites** as the type of origin server. Note that we will need to indicate the Origin Server **service name**, which follows the format of **servicename.namespace**. For this flow, use the namespace in which you deployed the vk8s cluster. Let's specify **buytime-database.<your-vk8s-ns>**.
+`e)` Enter a unique name for the origin pool, and then select **K8s Service Name of Origin Server on given Sites** as the type of origin server. Note that we will need to indicate the Origin Server **service name**, which follows the format of **servicename.namespace**. For this flow, use the namespace in which you deployed application in EKS cluster. Let's specify **buytime-database.<your-eks-ns>**.
 
 After that select site reference to site object **eks-cluster**. This specifies where the origin server is located. 
 
@@ -380,7 +380,7 @@ After that select site **Virtual Site** as site where the origin server will be 
 
 .. figure:: _figures/httplb_10.png
 
-`l)` Enter a unique name for the origin pool, and then select **K8s Service Name of Origin Server on given Sites** as the type of origin server. Note that we will need to indicate the Origin Server **service name**, which follows the format of **servicename.namespace**. For this flow, use the namespace in which you deployed the vk8s cluster. Let's specify **backend.<your-vk8s-ns>**.
+`l)` Enter a unique name for the origin pool, and then select **K8s Service Name of Origin Server on given Sites** as the type of origin server. Note that we will need to indicate the Origin Server **service name**, which follows the format of **servicename.namespace**. For this flow, use the namespace in which you deployed application in GKE cluster. Let's specify **backend.<your-eks-ns>**.
 
 After that select **Site** as site where the origin server will be located. Specify site reference to site object **eks-cluster**. This specifies where the origin server is located. 
 
